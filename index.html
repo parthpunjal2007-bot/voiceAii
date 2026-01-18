@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Media Creator | Generate Images & Videos with AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <span class="logo-text">AI Creator</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#generate" class="nav-link">
+                    <i class="fas fa-magic"></i>
+                    <span>Generate</span>
+                </a>
+                <a href="#gallery" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="#models" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Models</span>
+                </a>
+                <a href="#pricing" class="nav-link">
+                    <i class="fas fa-crown"></i>
+                    <span>Premium</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="credits-display">
+                    <i class="fas fa-bolt"></i>
+                    <span>100</span>
+                    <span class="credits-text">credits</span>
+                </div>
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="user-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Powered by Advanced AI</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Create <span class="gradient-text">Stunning Images & Videos</span>
+                    with Artificial Intelligence
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Transform your imagination into reality. Generate photorealistic images,
+                    artistic masterpieces, and dynamic videos with just a prompt.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#generate" class="btn-primary">
+                        <i class="fas fa-play"></i>
+                        Start Creating Free
+                    </a>
+                    <a href="#models" class="btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        See Examples
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Images Generated</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Videos Created</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">AI Available</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-preview">
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <span class="preview-label">Live Generation</span>
+                        <div class="preview-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&auto=format&fit=crop" alt="AI Generated Art">
+                    </div>
+                    <div class="preview-footer">
+                        <span class="prompt-text">"Majestic dragon flying over mountains at sunset"</span>
+                        <div class="preview-actions">
+                            <button class="preview-btn"><i class="fas fa-heart"></i></button>
+                            <button class="preview-btn"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section class="generator-section" id="generate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    AI Media Generator
+                </h2>
+                <p class="section-subtitle">Enter your prompt and customize settings to create amazing content</p>
+            </div>
+            
+            <div class="generator-grid">
+                <!-- Left: Prompt Input -->
+                <div class="prompt-panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-keyboard"></i> Prompt Input</h3>
+                        <div class="panel-actions">
+                            <button class="panel-btn" id="clearPrompt">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="panel-btn" id="loadExample">
+                                <i class="fas fa-lightbulb"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-container">
+                        <div class="prompt-textarea-container">
+                            <textarea class="prompt-textarea" id="promptInput" 
+                                      placeholder="Describe what you want to create in detail...
+Example: A beautiful fantasy landscape with floating islands, waterfalls, and ancient ruins, digital art, 8k resolution, cinematic lighting, trending on artstation" 
+                                      rows="8"></textarea>
+                            <div class="prompt-counter">
+                                <span id="charCount">0</span>/5000 characters
+                            </div>
+                        </div>
+                        
+                        <div class="prompt-tools">
+                            <button class="tool-btn" data-tool="enhance">
+                                <i class="fas fa-bolt"></i>
+                                Enhance Prompt
+                            </button>
+                            <button class="tool-btn" data-tool="translate">
+                                <i class="fas fa-language"></i>
+                                Translate
+                            </button>
+                            <button class="tool-btn" data-tool="variables">
+                                <i class="fas fa-sliders-h"></i>
+                                Add Variables
+                            </button>
+                        </div>
+                        
+                        <div class="prompt-examples">
+                            <h4>Try these examples:</h4>
+                            <div class="examples-grid">
+                                <div class="example-card" data-prompt="A cyberpunk cityscape at night with neon lights and flying cars, 8k, cinematic">
+                                    <span>Cyberpunk City</span>
+                                </div>
+                                <div class="example-card" data-prompt="Beautiful underwater scene with bioluminescent creatures and coral reefs, photorealistic">
+                                    <span>Ocean Fantasy</span>
+                                </div>
+                                <div class="example-card" data-prompt="Ancient temple in the jungle overgrown with vines, mysterious atmosphere, digital painting">
+                                    <span>Lost Temple</span>
+                                </div>
+                                <div class="example-card" data-prompt="Astronaut floating in space with Earth in background, detailed spacesuit, 4k">
+                                    <span>Space Explorer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Controls -->
+                <div class="controls-panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-sliders-h"></i> Generation Settings</h3>
+                        <button class="panel-btn" id="resetSettings">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Model Selection -->
+                    <div class="control-group">
+                        <label class="control-label">
+                            <i class="fas fa-brain"></i>
+                            AI Model
+                        </label>
+                        <div class="model-selection">
+                            <div class="model-tabs">
+                                <button class="model-tab active" data-type="image">
+                                    <i class="fas fa-image"></i>
+                                    Image
+                                </button>
+                                <button class="model-tab" data-type="video">
+                                    <i class="fas fa-video"></i>
+                                    Video
+                                </button>
+                            </div>
+                            
+                            <div class="model-options">
+                                <div class="model-option active" data-model="dalle3">
+                                    <div class="model-info">
+                                        <span class="model-name">DALL-E 3</span>
+                                        <span class="model-desc">Highest quality, realistic</span>
+                                    </div>
+                                    <div class="model-badge premium">Premium</div>
+                                </div>
+                                <div class="model-option" data-model="sd-xl">
+                                    <div class="model-info">
+                                        <span class="model-name">Stable Diffusion XL</span>
+                                        <span class="model-desc">Customizable, open source</span>
+                                    </div>
+                                    <div class="model-badge free">Free</div>
+                                </div>
+                                <div class="model-option" data-model="midjourney">
+                                    <div class="model-info">
+                                        <span class="model-name">Midjourney Style</span>
+                                        <span class="model-desc">Artistic, creative</span>
+                                    </div>
+                                    <div class="model-badge premium">Premium</div>
+                                </div>
+                                <div class="model-option" data-model="sora">
+                                    <div class="model-info">
+                                        <span class="model-name">Sora-like</span>
+                                        <span class="model-desc">AI Video Generation</span>
+                                    </div>
+                                    <div class="model-badge premium">Premium</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Size & Quality -->
+                    <div class="control-group">
+                        <label class="control-label">
+                            <i class="fas fa-expand"></i>
+                            Size & Quality
+                        </label>
+                        <div class="size-quality-controls">
+                            <div class="size-selector">
+                                <select class="size-select" id="sizeSelect">
+                                    <option value="1024x1024">Square (1024×1024)</option>
+                                    <option value="1792x1024">Landscape (1792×1024)</option>
+                                    <option value="1024x1792">Portrait (1024×1792)</option>
+                                    <option value="2048x2048">Large (2048×2048)</option>
+                                </select>
+                            </div>
+                            <div class="quality-selector">
+                                <div class="quality-option active" data-quality="standard">
+                                    <span>Standard</span>
+                                </div>
+                                <div class="quality-option" data-quality="hd">
+                                    <span>HD</span>
+                                </div>
+                                <div class="quality-option premium" data-quality="ultra">
+                                    <span>Ultra HD</span>
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Style & Parameters -->
+                    <div class="control-group">
+                        <label class="control-label">
+                            <i class="fas fa-palette"></i>
+                            Style & Parameters
+                        </label>
+                        <div class="style-parameters">
+                            <div class="style-selector">
+                                <select class="style-select" id="styleSelect">
+                                    <option value="vivid">Vivid (Colorful)</option>
+                                    <option value="natural">Natural</option>
+                                    <option value="artistic">Artistic</option>
+                                    <option value="photorealistic">Photorealistic</option>
+                                    <option value="anime">Anime Style</option>
+                                    <option value="cyberpunk">Cyberpunk</option>
+                                </select>
+                            </div>
+                            
+                            <div class="parameter-sliders">
+                                <div class="slider-group">
+                                    <label>
+                                        <span>Creativity: </span>
+                                        <span class="slider-value" id="creativityValue">7</span>
+                                    </label>
+                                    <input type="range" class="custom-slider" id="creativitySlider" min="1" max="10" value="7">
+                                </div>
+                                
+                                <div class="slider-group">
+                                    <label>
+                                        <span>Details: </span>
+                                        <span class="slider-value" id="detailsValue">8</span>
+                                    </label>
+                                    <input type="range" class="custom-slider" id="detailsSlider" min="1" max="10" value="8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Settings -->
+                    <div class="control-group advanced-group">
+                        <div class="advanced-header">
+                            <label class="control-label">
+                                <i class="fas fa-cogs"></i>
+                                Advanced Settings
+                            </label>
+                            <button class="advanced-toggle" id="advancedToggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="advanced-content" id="advancedContent">
+                            <div class="advanced-grid">
+                                <div class="advanced-control">
+                                    <label>Negative Prompt</label>
+                                    <textarea class="negative-prompt" 
+                                              placeholder="What to avoid in the image..."></textarea>
+                                </div>
+                                
+                                <div class="advanced-control">
+                                    <label>Seed (for consistency)</label>
+                                    <input type="text" class="seed-input" placeholder="Random" id="seedInput">
+                                </div>
+                                
+                                <div class="advanced-control">
+                                    <label>Batch Size</label>
+                                    <select class="batch-select">
+                                        <option value="1">1 image</option>
+                                        <option value="2">2 images</option>
+                                        <option value="4">4 images</option>
+                                        <option value="8">8 images</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generate Button -->
+                    <button class="generate-btn" id="generateButton">
+                        <i class="fas fa-sparkles"></i>
+                        <span>Generate Media</span>
+                        <div class="loading-spinner" id="loadingSpinner"></div>
+                    </button>
+                    
+                    <div class="generation-info">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Estimated time: <strong id="timeEstimate">20s</strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Cost: <strong id="costEstimate">5 credits</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-image"></i>
+                    Generated Results
+                </h2>
+                <p class="section-subtitle">Your creations will appear here</p>
+            </div>
+            
+            <div class="preview-container">
+                <div class="preview-placeholder" id="previewPlaceholder">
+                    <div class="placeholder-content">
+                        <i class="fas fa-sparkles"></i>
+                        <h3>Ready to Create Magic?</h3>
+                        <p>Enter a prompt above and generate your first AI creation</p>
+                    </div>
+                </div>
+                
+                <div class="preview-grid" id="previewGrid">
+                    <!-- Generated items will appear here -->
+                </div>
+            </div>
+            
+            <div class="preview-actions">
+                <button class="action-btn" id="downloadAll">
+                    <i class="fas fa-download"></i>
+                    Download All
+                </button>
+                <button class="action-btn" id="shareGallery">
+                    <i class="fas fa-share-alt"></i>
+                    Share Gallery
+                </button>
+                <button class="action-btn" id="clearGallery">
+                    <i class="fas fa-trash"></i>
+                    Clear All
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="models">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-rocket"></i>
+                    Powerful AI Models
+                </h2>
+                <p class="section-subtitle">Choose from our collection of advanced AI models</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>DALL-E 3</h3>
+                    <p>Most advanced image generation model from OpenAI. Produces photorealistic images with incredible detail.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Photorealistic</span>
+                        <span class="tag">High Detail</span>
+                        <span class="tag premium-tag">Premium</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Stable Diffusion XL</h3>
+                    <p>Open-source powerhouse for creative freedom. Perfect for artistic and customizable generations.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">Customizable</span>
+                        <span class="tag free-tag">Free</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Sora-like AI</h3>
+                    <p>Generate stunning videos from text prompts. Create dynamic scenes with motion and emotion.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Video Generation</span>
+                        <span class="tag">Dynamic</span>
+                        <span class="tag premium-tag">Premium</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Midjourney Style</h3>
+                    <p>Artistic AI model specialized in creating beautiful, artistic, and creative imagery.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Artistic</span>
+                        <span class="tag">Creative</span>
+                        <span class="tag premium-tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-images"></i>
+                    Community Gallery
+                </h2>
+                <p class="section-subtitle">See what others have created with our AI</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Trending</button>
+                <button class="filter-btn">Photorealistic</button>
+                <button class="filter-btn">Artistic</button>
+                <button class="filter-btn">Video</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Gallery items -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1682686580391-615b1f28e5ee?w=400&auto=format&fit=crop" alt="AI Art">
+                        <div class="gallery-overlay">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>245</span>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <p class="gallery-prompt">"Fantasy castle in the clouds, digital painting"</p>
+                        <div class="gallery-meta">
+                            <span class="model-tag">DALL-E 3</span>
+                            <span class="time-ago">2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?w=400&auto=format&fit=crop" alt="AI Art">
+                        <div class="gallery-overlay">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>189</span>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <p class="gallery-prompt">"Cyberpunk street market at night, neon lights"</p>
+                        <div class="gallery-meta">
+                            <span class="model-tag">SD XL</span>
+                            <span class="time-ago">5 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w-400&auto=format&fit=crop" alt="AI Art">
+                        <div class="gallery-overlay">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>312</span>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <p class="gallery-prompt">"Underwater civilization with glowing architecture"</p>
+                        <div class="gallery-meta">
+                            <span class="model-tag">Midjourney</span>
+                            <span class="time-ago">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1682685797366-715d29e33f9d?w-400&auto=format&fit=crop" alt="AI Art">
+                        <div class="gallery-overlay">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>156</span>
+                            </button>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <p class="gallery-prompt">"Ancient library with floating books, magical"</p>
+                        <div class="gallery-meta">
+                            <span class="model-tag">DALL-E 3</span>
+                            <span class="time-ago">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-load-more">
+                <button class="load-more-btn">
+                    <i class="fas fa-sync"></i>
+                    Load More Creations
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-crown"></i>
+                    Choose Your Plan
+                </h2>
+                <p class="section-subtitle">Unlock more features and higher limits</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/forever</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>50 free generations</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Standard quality</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Basic models</span>
+                        </div>
+                        <div class="feature-item disabled">
+                            <i class="fas fa-times"></i>
+                            <span>No video generation</span>
+                        </div>
+                        <div class="feature-item disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Watermarked outputs</span>
+                        </div>
+                    </div>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="price-amount">$19</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>1000 generations/month</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>HD & Ultra HD quality</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>All AI models</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Video generation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>No watermark</span>
+                        </div>
+                    </div>
+                    <button class="pricing-btn primary">Upgrade to Pro</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="price-amount">$99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Unlimited generations</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Priority generation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>API access</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Custom models</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Dedicated support</span>
+                        </div>
+                    </div>
+                    <button class="pricing-btn">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Creator</span>
+                    </div>
+                    <p class="footer-description">
+                        Create stunning images and videos with the power of artificial intelligence.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#generate">Generator</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#models">AI Models</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Acceptable Use</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 AI Creator. All rights reserved. Generated content may be subject to AI model terms.</p>
+                <div class="footer-meta">
+                    <span class="status-indicator active"></span>
+                    <span>All systems operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="generationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Generating Your Content</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="generation-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressStatus">Initializing AI model...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+                <div class="generation-preview" id="generationPreview">
+                    <!-- Preview will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
